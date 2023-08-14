@@ -16,7 +16,7 @@ export const services = [
     icon: web,
   },
   {
-    title: "Content Creator",
+    title: "UI/UX designer",
     icon: creator,
   },
 ];
@@ -62,9 +62,7 @@ const About = () => {
         variants={fadeIn("", "", 0.1, 1)}
         className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'
       >
-        I'm a skilled software developer with experience in Html-5, CSS-3 and JavaScript, and expertise in frameworks like React, Tailwind, Node.js, and Next.js. I'm a quick learner and collaborate closely with clients to
-        create efficient, scalable, and user-friendly solutions that solve
-        real-world problems. Let's work together to bring your ideas to life!
+        I&apos;m a skilled software developer with experience in Html5, CSS3 and JavaScript, react and expertise in frameworks like Tailwind and Next.js. I&apos;m a quick learner and collaborate closely with clients to create efficient, scalable and user-friendly solutions that solve real world problems. Let&apos;s work together to bring your ideas to life!
       </motion.p>
       
       <div className='mt-20 grid lg:flex gap-10'>

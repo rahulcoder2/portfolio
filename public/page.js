@@ -12,6 +12,8 @@ import tailwind from './tailwind.png'
 import reactjs from './reactjs.png'
 import nodejs from './nodejs.png'
 import nextjs from './nextjs.png'
+import project from './project.png'
+import github from './github.png'
 
 
 export {
@@ -28,5 +30,7 @@ export {
   reactjs,
   tailwind,
   git,
-  nextjs
+  nextjs,
+  github,
+  project
 }
