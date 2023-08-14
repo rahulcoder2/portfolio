@@ -76,6 +76,7 @@ const Skills = () =>{
               src={skill.icon}
               width={250}
               height={250}
+              alt='icon'
               className='rounded-full object-contain bg-white'
             />
           </div>

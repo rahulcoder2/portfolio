@@ -5,11 +5,20 @@ import { fadeIn, textVariant } from '../utils/motion'
 import SectionWrapper from '../hoc/SectionWrapper'
 import Image from 'next/image'
 
+import { project, github } from '../public/page'
+
 import { styles } from '../app/styles';
 
 import Link from 'next/link'
-
-const projects = [1]
+const projects = [
+  {
+    name: "Travel.s",
+    description:
+      "Web application that enables users to see Frontend of Travels.",
+    image: project,
+    source_code_link: "https://rahulcoder2.github.io/Travel.s/",
+  },
+];
 
 const Project = () => {
   return(
@@ -22,24 +31,25 @@ const Project = () => {
       
       <div className='relative z-20 w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory'>
         {projects.map((project, i) =>(
-          <div className='w-full flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center  '>
-            <motion.div variants={fadeIn("down", "spring", 0.5, 0.75)} className='relative'>
-            <Link href="https://rahulcoder2.github.io/Travel.s/">
+          <div className='w-full flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center' key={project.name}>
+            <motion.div variants={fadeIn("down", "spring", 0.5, 0.75)} className='relative'
+            onClick={() => window.open(project.source_code_link, "_blank")}>
               <Image 
                 src='/project.png'
                 width={150}
                 height={150}
+                alt='project'
                 className='w-72 h-60 object-contain'
               />
-              <div className='absolute right-[12%] top-2'>
+              <div className='absolute right-[26%] top-1 black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer'>
                 <Image
                   src='/github.png'
                   width={150}
                   height={150}
-                  className='w-8 h-8 rounded-full bg-black-100'
+                  alt='github'
+                  className='w-1/2 h-1/2 object-contain'
                 />
               </div>
-            </Link>
             </motion.div>
             
             <motion.div variants={textVariant()}
@@ -47,10 +57,10 @@ const Project = () => {
                 <h4 className={`${styles.sectionHeadText} text-center font-semibold`}>
                   <span>
                     Case Study {i +1} of {project.length}:
-                  </span>{""} Travel.s Website Frontend.
+                  </span>{""} {project.name}
                 </h4>
                 <p className={`${styles.sectionSubText} text-center md:text-left `}>
-                  Web application that enables users to see Frontend of Travels.
+                  {project.description}
                 </p>
             </motion.div>
           </div>
