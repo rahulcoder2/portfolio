@@ -33,8 +33,8 @@ const Project = () => {
         {projects.map((project, i) =>(
           <div className='w-full flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center' key={project.name}>
             <motion.div variants={fadeIn("down", "spring", 0.5, 0.75)} className='relative'
+            onClick={() => window.open(project.source_code_link, "_blank")}
             >
-            <Link href={project.source_code_link}>
               <Image 
                 src='/project.png'
                 width={150}
@@ -51,7 +51,6 @@ const Project = () => {
                   className='w-1/2 h-1/2 object-contain'
                 />
               </div>
-              </Link>
             </motion.div>
             
             <motion.div variants={textVariant()}
